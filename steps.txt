@@ -1,0 +1,47 @@
+git init
+npm init
+npm i --save-dev webpack webpack-dev-server webpack-cli
+
+in scripts in package.json add 
+ "build": "webpack"
+
+cin scripts change to this. don't touch test
+ "scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+
+
+run npm dev 
+it creates a dist folder
+
+then do
+npm run build
+
+
+
+refer to this tutorial
+
+https://www.valentinog.com/blog/webpack-tutorial/
+
+
+install babel:
+
+npm i @babel/core babel-loader @babel/preset-env @babel/node  --save-dev
+
+create webpack.config.js and .babelrc
+
+to understand html, install html-webpack-plugin
+
+npm i html-webpack-plugin html-loader --save-dev
+
+configure html in webpackconfig file
+
+for css
+
+npm i mini-css-extract-plugin css-loader --save-dev
+
+configure css in webpackconfig file
+
+change the dev in scripts to
+"start": "webpack-dev-server --mode development --open",
